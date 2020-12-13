@@ -1,0 +1,48 @@
+
+$theme-colors: (
+    "primary": #1A0EAD,
+    "secondary": #030029
+);
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid{
+    max-width: 1250px;
+}
+
+.btn-primary{
+    border-radius: 0px;
+    box-shadow: none !important;
+    outline: none !important;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    &:hover{
+        &::after{
+            animation: arrow 1.5s infinite;
+            animation-timing-function: ease-in-out;
+        }
+    }
+    &::after{
+        content: url('./assets/arrow_forward.svg');
+        padding-left: 35px;
+        padding-right: 5px;
+        float: right;
+        position: relative;
+    }
+}
+
+@keyframes arrow {
+    0%   {left: 0px;}
+    50%  {left: 10px;}
+    100% {left: 0px;}
+}

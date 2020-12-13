@@ -1,0 +1,26 @@
+.heroWrapper{
+    background: url('../../assets/desktop_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .left{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-right: 40px;
+    }
+    &::after{
+        content: url(../../assets/footer-pattern.png);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: -99;
+    }
+    .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
